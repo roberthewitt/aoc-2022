@@ -1,3 +1,3 @@
 
 
-await import('./day1/index.js')
+await import('./day2/index.js')
