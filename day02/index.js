@@ -1,8 +1,8 @@
 import { readFile } from 'node:fs/promises'
 
 const lines = async file => (await readFile(file, { encoding: "utf-8" })).split("\n")
-const test = await lines('./day2/testdata.txt')
-const real = await lines('./day2/puzzle.txt')
+const test = await lines('./day02/testdata.txt')
+const real = await lines('./day02/puzzle.txt')
 
 const pt1 = data => data.map(([o, _, m]) => [op.indexOf(o), me.indexOf(m)])
     .reduce((pr, [oi, mi]) => pr + score[mi] + (mi === oi ? 3 : ((mi + 1) % 3) === oi ? 0 : 6), 0)

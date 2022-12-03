@@ -1,8 +1,8 @@
 import { readFile } from 'node:fs/promises'
 
 const numbers = async file => (await readFile(file, { encoding: "utf-8" })).split("\n").map(Number).concat([0])
-const test = await numbers('./day1/testdata.txt')
-const real = await numbers('./day1/puzzle.txt')
+const test = await numbers('./day01/testdata.txt')
+const real = await numbers('./day01/puzzle.txt')
 
 
 
